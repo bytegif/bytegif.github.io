@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Audio Tag Editor | ByteGif</title>
+  <meta name="description"
+    content="Privacy Policy for Audio Tag Editor by ByteGif. Learn how your data is handled when using our app.">
+  <link rel="icon" href="../images/logo-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body class="policy-body">
+
+  <!-- ambient glows -->
+  <div class="ambient-glow ambient-glow--blue"></div>
+  <div class="ambient-glow ambient-glow--green"></div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">
+          <img src="../images/logo-icon.png" alt="ByteGif logo">
+          ByteGif
+        </a>
+        <ul>
+          <li><a href="/">All Apps</a></li>
+          <li><a href="./">Audio Tag Editor</a></li>
+        </ul>
+        <a class="nav-cta" href="./">← Back to App</a>
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="policy-container">
+      <div class="policy-header">
+        <img src="../images/audio-tag-editor.webp" alt="Audio Tag Editor Logo" class="app-logo">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: July 11, 2026</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>Audio Tag Editor</strong>. We respect your privacy and are committed to protecting any
+          information related to you. This Privacy Policy describes how your information is handled when you use our
+          mobile application.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. Data Collection and Usage</h2>
+        <p><strong>Audio Tag Editor</strong> is built with user privacy as a core tenet. Here is how your data is
+          handled:</p>
+        <ul>
+          <li><strong>Audio Files and Metadata:</strong> All audio editing, file scanning, and metadata editing are
+            performed completely offline, local to your device. We do not upload, store, or transmit your audio files or
+            any metadata (such as titles, artists, or album covers) to external servers.</li>
+          <li><strong>Device Permissions:</strong> The app requests storage/media permissions solely to read audio files
+            from your device and save your modified tags back to the storage.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. Third-Party Services (Advertising)</h2>
+        <p>To keep this application free, we integrate advertisement services. These third-party providers may collect
+          and process information about you to serve personalized or non-personalized ads:</p>
+        <ul>
+          <li><strong>Google AdMob:</strong> AdMob utilizes device identifiers, cookies, and other usage statistics to
+            serve advertisements. You can learn more about how Google uses data by visiting their <a
+              href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Advertising
+              Policies</a>.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. Data Security</h2>
+        <p>Since your files and metadata remain entirely on your device, the security of that data relies on your
+          device's built-in operating system security settings. We implement standard programming best practices locally
+          to ensure data integrity during file modification.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>5. Children's Privacy</h2>
+        <p>Our services do not address anyone under the age of 13. We do not knowingly collect personally identifiable
+          information from children under 13.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically
+          for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at <a
+            href="mailto:bytegif@gmail.com">bytegif@gmail.com</a>.</p>
+      </div>
+
+      <div class="policy-footer">
+        <p>© 2026 Audio Tag Editor by ByteGif. All Rights Reserved.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img src="../images/logo-icon.png" alt="ByteGif logo">
+        ByteGif
+      </a>
+      <p>© 2026 ByteGif. All rights reserved.</p>
+      <div class="foot-links">
+        <a href="/">All Apps</a>
+        <a href="./">Audio Tag Editor</a>
+        <a href="mailto:bytegif@gmail.com">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.querySelector('.menu-btn');
+      const navUl = document.querySelector('nav ul');
+
+      if (menuBtn && navUl) {
+        menuBtn.addEventListener('click', () => {
+          navUl.classList.toggle('active');
+          menuBtn.textContent = navUl.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navUl.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navUl.classList.remove('active');
+            menuBtn.textContent = '☰';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

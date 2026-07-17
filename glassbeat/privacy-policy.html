@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — GlassBeat | ByteGif</title>
+  <meta name="description"
+    content="Privacy Policy for GlassBeat by ByteGif. Learn how your data is handled when using our app.">
+  <link rel="icon" href="../images/logo-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body class="policy-body">
+
+  <!-- ambient glows -->
+  <div class="ambient-glow ambient-glow--blue"></div>
+  <div class="ambient-glow ambient-glow--green"></div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">
+          <img src="../images/logo-icon.png" alt="ByteGif logo">
+          ByteGif
+        </a>
+        <ul>
+          <li><a href="/">All Apps</a></li>
+          <li><a href="./">GlassBeat</a></li>
+        </ul>
+        <a class="nav-cta" href="./">← Back to App</a>
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="policy-container">
+      <div class="policy-header">
+        <img src="../images/glassbeat.webp" alt="GlassBeat Logo" class="app-logo">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: July 16, 2026</p>
+      </div>
+
+      <div class="policy-section">
+        <p>This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your
+          information when you use the GlassBeat application (referred to as "the App" or "GlassBeat").</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>1. Information Collection and Use</h2>
+        <p><strong>GlassBeat</strong> is built as an offline-first local audio player. We prioritize your privacy and do not collect or
+          transmit your personal data to external servers.</p>
+        <p><strong>Local Data Access:</strong></p>
+        <ul>
+          <li><strong>Media Library Access:</strong> The App requires permission to read your device's external storage
+            (audio files) to display and play your local music library. This data remains strictly on your device.</li>
+          <li><strong>Local Storage (Room Database):</strong> The App stores your listening history, custom playlists, and
+            equalizer settings locally in an offline database. This data is never shared.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. Third-Party Services (Advertising)</h2>
+        <p>To keep the App free to use, we intend to integrate third-party advertising networks (specifically Google AdMob).
+          These services may collect information used to identify your device, serve personalized ads, or track ad
+          interactions.</p>
+        <p>You can read the privacy policies of our third-party provider below:</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Services
+              &amp; AdMob Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. Permissions Required</h2>
+        <p>The App requests the following permissions to function correctly:</p>
+        <ul>
+          <li><strong>READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE:</strong> To scan and index your local audio files.</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> To show the playback controller notification panel.</li>
+          <li><strong>FOREGROUND_SERVICE:</strong> To keep audio playing smoothly in the background.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. Children's Privacy</h2>
+        <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable
+          information from children under 13.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>5. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any
+          changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a
+            href="mailto:bytegif@gmail.com">bytegif@gmail.com</a>.</p>
+      </div>
+
+      <div class="policy-footer">
+        <p>© 2026 GlassBeat by ByteGif. All Rights Reserved.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img src="../images/logo-icon.png" alt="ByteGif logo">
+        ByteGif
+      </a>
+      <p>© 2026 ByteGif. All rights reserved.</p>
+      <div class="foot-links">
+        <a href="/">All Apps</a>
+        <a href="./">GlassBeat</a>
+        <a href="mailto:bytegif@gmail.com">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.querySelector('.menu-btn');
+      const navUl = document.querySelector('nav ul');
+
+      if (menuBtn && navUl) {
+        menuBtn.addEventListener('click', () => {
+          navUl.classList.toggle('active');
+          menuBtn.textContent = navUl.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navUl.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navUl.classList.remove('active');
+            menuBtn.textContent = '☰';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

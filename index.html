@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByteGif — Apps built to be useful</title>
+  <meta name="description"
+    content="ByteGif builds thoughtful Android apps that solve real problems. Explore our collection of tools and utilities.">
+  <link rel="icon" href="images/logo-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <!-- ambient glows -->
+  <div class="ambient-glow ambient-glow--blue"></div>
+  <div class="ambient-glow ambient-glow--green"></div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">
+          <img src="images/logo-icon.png" alt="ByteGif logo">
+          ByteGif
+        </a>
+        <ul>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="nav-cta" href="#contact">Get in touch →</a>
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> APP SHOWCASE</div>
+          <h1>Apps that solve <span class="accent">real problems.</span></h1>
+          <p class="lead">ByteGif builds thoughtful Android tools — designed with care, built for performance, and
+            shipped to the Play Store.</p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#apps">Explore apps ↓</a>
+            <a class="btn-ghost" href="#contact">Contact us</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual__grid">
+            <a href="audio-tag-editor/" class="grid-slot active">
+              <img src="images/audio-tag-editor.webp" alt="Audio Tag Editor">
+            </a>
+            <a href="glassbeat/" class="grid-slot active">
+              <img src="images/glassbeat.webp" alt="GlassBeat">
+            </a>
+            <a href="#apps" class="grid-slot active">
+              <img src="images/tong-shop.webp" alt="Tong Shop">
+            </a>
+            <div class="grid-slot placeholder green"></div>
+            <div class="grid-slot placeholder"></div>
+            <div class="grid-slot placeholder"></div>
+            <div class="grid-slot placeholder blue"></div>
+            <div class="grid-slot placeholder green"></div>
+            <div class="grid-slot placeholder"></div>
+          </div>
+          <div class="hero-badge">
+            <span class="pixel-grid"><span></span><span></span><span></span><span></span></span>
+            More apps coming soon
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPS -->
+    <section id="apps">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow"><span class="dot"></span> OUR APPS</div>
+          <h2>Tools you'll actually use.</h2>
+          <p>Every app is built with a focus on doing one thing really well — offline-first, privacy-respecting, and
+            beautifully designed.</p>
+        </div>
+        <div class="apps-grid">
+          <!-- Audio Tag Editor -->
+          <a class="app-card" href="audio-tag-editor/" id="app-audio-tag-editor">
+            <div class="app-card__banner">
+              <img src="images/audio-tag-editor.webp" alt="Audio Tag Editor icon">
+            </div>
+            <div class="app-card__body">
+              <div class="app-card__badge">● ANDROID APP</div>
+              <h3 class="app-card__title">Audio Tag Editor</h3>
+              <p class="app-card__desc">Edit audio tags, album art, and metadata of your music files — completely
+                offline. A fast, secure Android utility for organizing your library.</p>
+              <span class="app-card__link">Learn more →</span>
+            </div>
+          </a>
+
+          <!-- GlassBeat -->
+          <a class="app-card" href="glassbeat/" id="app-glassbeat">
+            <div class="app-card__banner">
+              <img src="images/glassbeat.webp" alt="GlassBeat icon">
+            </div>
+            <div class="app-card__body">
+              <div class="app-card__badge">● ANDROID APP</div>
+              <h3 class="app-card__title">GlassBeat</h3>
+              <p class="app-card__desc">A gorgeous local music player for Android. Experience your music through a stunning glassmorphic interface, dynamic color themes, and high-fidelity offline playback.</p>
+              <span class="app-card__link">Learn more →</span>
+            </div>
+          </a>
+
+          <!-- Coming Soon -->
+          <div class="coming-soon-card">
+            <div class="icon-placeholder">+</div>
+            <h3>More apps on the way</h3>
+            <p>We're building the next one. Stay tuned.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow blue"><span class="dot"></span> ABOUT BYTEGIF</div>
+          <h2>Small studio, big focus.</h2>
+          <p>ByteGif is an independent brand building Android apps that prioritize user privacy, performance, and clean
+            design.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-item">
+            <div class="icon-mark" style="background:linear-gradient(135deg,var(--blue-1),var(--blue-2));">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3>Privacy first</h3>
+            <p>Your data stays on your device. We don't collect, transmit, or store anything we don't need to.</p>
+          </div>
+          <div class="about-item">
+            <div class="icon-mark" style="background:linear-gradient(135deg,var(--green),var(--green-dim));">
+              <svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <h3>Built for speed</h3>
+            <p>Lean, native Android code. No bloated frameworks — just fast, responsive apps that respect your battery.
+            </p>
+          </div>
+          <div class="about-item">
+            <div class="icon-mark" style="background:linear-gradient(135deg,var(--blue-1),var(--blue-2));">
+              <svg viewBox="0 0 24 24">
+                <rect x="6" y="2" width="12" height="20" rx="2" />
+                <line x1="10" y1="18" x2="14" y2="18" />
+              </svg>
+            </div>
+            <h3>Native Android</h3>
+            <p>Built with Kotlin and Jetpack Compose, targeting the latest Android APIs and Material Design guidelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta">
+          <div class="eyebrow" style="background:rgba(62,189,89,0.12);border-color:rgba(62,189,89,0.3);">
+            <span class="dot"></span> GET IN TOUCH
+          </div>
+          <h2>Have feedback or a suggestion?</h2>
+          <p>Whether it's a bug report, feature idea, or just a hello — we'd love to hear from you.</p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="mailto:bytegif@gmail.com">Email bytegif@gmail.com</a>
+          </div>
+          <div class="cta-mail">
+            <a href="mailto:bytegif@gmail.com">bytegif@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img src="images/logo-icon.png" alt="ByteGif logo">
+        ByteGif
+      </a>
+      <p>© 2026 ByteGif. Apps built to be useful.</p>
+      <div class="foot-links">
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
+        <a href="mailto:bytegif@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.querySelector('.menu-btn');
+      const navUl = document.querySelector('nav ul');
+
+      if (menuBtn && navUl) {
+        menuBtn.addEventListener('click', () => {
+          navUl.classList.toggle('active');
+          menuBtn.textContent = navUl.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navUl.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navUl.classList.remove('active');
+            menuBtn.textContent = '☰';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
