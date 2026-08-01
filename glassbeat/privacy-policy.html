@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — GlassBeat | ByteGif</title>
-  <meta name="description"
-    content="Privacy Policy for GlassBeat by ByteGif. Learn how your data is handled when using our app.">
+  <title>Privacy Policy - GlassBeat | ByteGif</title>
+  <meta name="description" content="GlassBeat privacy policy for the offline music player from ByteGif.">
   <link rel="icon" href="../images/favicon-16.png" sizes="16x16" type="image/png">
   <link rel="icon" href="../images/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
-  <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#108dfd">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +14,8 @@
     href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-
 </head>
-
 <body class="policy-body">
-
-  <!-- ambient glows -->
   <div class="ambient-glow ambient-glow--blue"></div>
   <div class="ambient-glow ambient-glow--green"></div>
 
@@ -36,9 +28,9 @@
         </a>
         <ul>
           <li><a href="/">All Apps</a></li>
-          <li><a href="./">GlassBeat</a></li>
+          <li><a href="index.html">GlassBeat</a></li>
         </ul>
-        <a class="nav-cta" href="./">← Back to App</a>
+        <a class="nav-cta" href="index.html">← Back to App</a>
         <button class="menu-btn" aria-label="Open menu">☰</button>
       </nav>
     </div>
@@ -47,71 +39,63 @@
   <main>
     <div class="policy-container">
       <div class="policy-header">
-        <img src="../images/glassbeat.webp" alt="GlassBeat Logo" class="app-logo">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: July 16, 2026</p>
+        <img src="../images/glassbeat.webp" alt="GlassBeat app icon" class="app-logo">
+        <h1>Privacy Policy for GlassBeat</h1>
+        <p class="last-updated">Last updated: August 1, 2026</p>
       </div>
 
-      <div class="policy-section">
-        <p>This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your
-          information when you use the GlassBeat application (referred to as "the App" or "GlassBeat").</p>
-      </div>
+      <section class="policy-section">
+        <p>This Privacy Policy describes how <strong>GlassBeat</strong> ("we", "us", or "our") handles your information when you use our mobile application (the "App").</p>
+      </section>
 
-      <div class="policy-section">
-        <h2>1. Information Collection and Use</h2>
-        <p><strong>GlassBeat</strong> is built as an offline-first local audio player. We prioritize your privacy and do not collect or
-          transmit your personal data to external servers.</p>
-        <p><strong>Local Data Access:</strong></p>
+      <section class="policy-section">
+        <h2>1. Information We Collect and Access</h2>
+        <p>GlassBeat is primarily a local offline music player designed to respect your privacy. We do not collect or store your personal identity information on external servers.</p>
+
+        <h3>A. Local Audio and Storage Access</h3>
+        <p>To provide music playback and library features, the App requests permission to access audio files stored on your device:</p>
         <ul>
-          <li><strong>Media Library Access:</strong> The App requires permission to read your device's external storage
-            (audio files) to display and play your local music library. This data remains strictly on your device.</li>
-          <li><strong>Local Storage (Room Database):</strong> The App stores your listening history, custom playlists, and
-            equalizer settings locally in an offline database. This data is never shared.</li>
+          <li><strong>READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE:</strong> Used exclusively to scan, organize, and play your local audio files.</li>
+          <li><strong>Local Database (Room Storage):</strong> Favorites, playlists, listen history, and equalizer presets are stored locally on your device only.</li>
         </ul>
-      </div>
 
-      <div class="policy-section">
-        <h2>2. Third-Party Services (Advertising)</h2>
-        <p>To keep the App free to use, we intend to integrate third-party advertising networks (specifically Google AdMob).
-          These services may collect information used to identify your device, serve personalized ads, or track ad
-          interactions.</p>
-        <p>You can read the privacy policies of our third-party provider below:</p>
+        <h3>B. Device and Performance Data</h3>
+        <p>The App uses standard system features for background playback and notification controls:</p>
         <ul>
-          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Services
-              &amp; AdMob Privacy Policy</a></li>
+          <li><strong>FOREGROUND_SERVICE &amp; FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> Keeps audio playback active when the App is in the background or screen is locked.</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> Displays playback controls on your lock screen and notification bar.</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="policy-section">
-        <h2>3. Permissions Required</h2>
-        <p>The App requests the following permissions to function correctly:</p>
+      <section class="policy-section">
+        <h2>2. Third-Party Services &amp; Advertising</h2>
+        <p>To keep the App free, GlassBeat integrates third-party services that may collect anonymous device information for ad serving and analytics.</p>
+
+        <h3>Google Mobile Ads (AdMob)</h3>
+        <p>Google AdMob may collect and use device advertising identifiers (e.g., AAID), IP address, and interaction data to serve ads. For more information, please review:</p>
         <ul>
-          <li><strong>READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE:</strong> To scan and index your local audio files.</li>
-          <li><strong>POST_NOTIFICATIONS:</strong> To show the playback controller notification panel.</li>
-          <li><strong>FOREGROUND_SERVICE:</strong> To keep audio playing smoothly in the background.</li>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy &amp; Terms Policy</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use their services</a></li>
         </ul>
-      </div>
+      </section>
 
-      <div class="policy-section">
-        <h2>4. Children's Privacy</h2>
-        <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable
-          information from children under 13.</p>
-      </div>
+      <section class="policy-section">
+        <h2>3. Children's Privacy</h2>
+        <p>Our App is not intended for children under the age of 13. We do not knowingly collect personal information from children.</p>
+      </section>
 
-      <div class="policy-section">
-        <h2>5. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any
-          changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-      </div>
+      <section class="policy-section">
+        <h2>4. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.</p>
+      </section>
 
-      <div class="policy-section">
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a
-            href="mailto:bytegif@gmail.com">bytegif@gmail.com</a>.</p>
-      </div>
+      <section class="policy-section">
+        <h2>5. Contact Us</h2>
+        <p>If you have any questions or suggestions about this Privacy Policy, please contact us at <a href="mailto:bytegif@gmail.com">bytegif@gmail.com</a>.</p>
+      </section>
 
       <div class="policy-footer">
-        <p>© 2026 GlassBeat by ByteGif. All Rights Reserved.</p>
+        <p>© 2026 GlassBeat by ByteGif. All rights reserved.</p>
       </div>
     </div>
   </main>
@@ -122,10 +106,10 @@
         <img src="../images/main-logo.png" alt="ByteGif logo">
         ByteGif
       </a>
-      <p>© 2026 ByteGif. All rights reserved.</p>
+      <p>© 2026 GlassBeat by ByteGif. All rights reserved.</p>
       <div class="foot-links">
         <a href="/">All Apps</a>
-        <a href="./">GlassBeat</a>
+        <a href="index.html">GlassBeat</a>
         <a href="mailto:bytegif@gmail.com">Support</a>
       </div>
     </div>
@@ -152,5 +136,4 @@
     });
   </script>
 </body>
-
 </html>

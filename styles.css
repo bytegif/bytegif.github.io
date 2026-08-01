@@ -39,6 +39,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
+  scroll-padding-top: calc(90px + env(safe-area-inset-top, 0px));
 }
 
 body {
@@ -51,7 +52,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  padding-top: 96px;
+  padding-top: calc(76px + env(safe-area-inset-top, 0px));
 }
 
 h1, h2, h3, .display {
@@ -234,14 +235,12 @@ nav ul a:hover { color: var(--brand-blue); }
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  padding: 96px 0 84px;
+  padding: 20px 0 84px;
   overflow: hidden;
-  margin-top: 70px;
 }
 @media(max-width:640px) {
   .hero {
-    margin-top: 50px;
-    padding: 60px 0 50px;
+    padding: 28px 0 50px;
   }
 }
 .hero::before {
@@ -253,7 +252,7 @@ nav ul a:hover { color: var(--brand-blue); }
 }
 
 /* ---------- section shell ---------- */
-section { padding: 96px 0; }
+section { padding: 96px 0; scroll-margin-top: calc(90px + env(safe-area-inset-top, 0px)); }
 .section-head { max-width: 600px; margin-bottom: 56px; }
 .section-head .eyebrow { margin-bottom: 18px; }
 .section-head h2 { font-size: 36px; font-weight: 700; color: var(--text); line-height: 1.2; }
@@ -824,7 +823,7 @@ footer .foot-links a:hover { color: var(--brand-blue); }
    =================================================== */
 .app-hero {
   position: relative;
-  padding: 80px 0 96px;
+  padding: 40px 0 96px;
   overflow: hidden;
 }
 
