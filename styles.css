@@ -235,7 +235,7 @@ nav ul a:hover { color: var(--brand-blue); }
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  padding: 20px 0 84px;
+  padding: 40px 0 96px;
   overflow: hidden;
 }
 @media(max-width:640px) {
@@ -245,10 +245,19 @@ nav ul a:hover { color: var(--brand-blue); }
 }
 .hero::before {
   content: "";
-  position: absolute; top: -220px; right: -160px;
-  width: 640px; height: 640px; border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, rgba(16,141,253,0.16), rgba(16,141,253,0) 68%);
+  position: absolute; top: -200px; right: -120px;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(16,141,253,0.16), rgba(16,141,253,0) 65%);
   pointer-events: none;
+}
+@media(max-width:640px) {
+  .hero::before {
+    top: -400px;
+    right: -350px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at 40% 40%, rgba(16,141,253,0.05), rgba(16,141,253,0) 65%);
+  }
 }
 
 /* ---------- section shell ---------- */
@@ -935,6 +944,7 @@ footer .foot-links a:hover { color: var(--brand-blue); }
 
 .screenshot-scroll {
   display: flex;
+  justify-content: center;
   gap: 20px;
   overflow-x: auto;
   padding: 10px 4px 30px;
