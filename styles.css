@@ -986,10 +986,10 @@ footer .foot-links a[href*="play.google.com"]:focus svg {
 
 .screenshot-scroll {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   overflow-x: auto;
-  padding: 10px 4px 30px;
+  padding: 10px 24px 30px;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: rgba(16, 141, 253, 0.9) transparent;
