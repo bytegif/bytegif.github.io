@@ -406,6 +406,38 @@ footer .foot-links { display: flex; gap: 22px; font-size: 13px; color: var(--tex
 footer .foot-links a { text-decoration: none; transition: color .2s; }
 footer .foot-links a:hover { color: var(--brand-blue); }
 
+/* Footer icon colors and hover states */
+footer .foot-links a svg {
+  width: 18px; height: 18px; vertical-align: middle; display: inline-block;
+  transition: fill .18s ease, color .18s ease, transform .18s ease;
+}
+
+/* Facebook: default grey, hover -> brand blue */
+footer .foot-links a[href*="facebook.com"] svg path {
+  fill: #6b7280;
+}
+footer .foot-links a[href*="facebook.com"]:hover svg path,
+footer .foot-links a[href*="facebook.com"]:focus svg path {
+  fill: var(--brand-blue);
+}
+footer .foot-links a[href*="facebook.com"]:hover svg,
+footer .foot-links a[href*="facebook.com"]:focus svg {
+  transform: translateY(-2px);
+}
+
+/* Play Store: default inherits muted color, hover -> red */
+footer .foot-links a[href*="play.google.com"] svg path {
+  fill: currentColor;
+}
+footer .foot-links a[href*="play.google.com"]:hover svg path,
+footer .foot-links a[href*="play.google.com"]:focus svg path {
+  fill: #FF3B30;
+}
+footer .foot-links a[href*="play.google.com"]:hover svg,
+footer .foot-links a[href*="play.google.com"]:focus svg {
+  transform: translateY(-2px);
+}
+
 /* ---------- content page (privacy policy, etc.) ---------- */
 .content-page {
   max-width: 800px;
@@ -483,13 +515,23 @@ footer .foot-links a:hover { color: var(--brand-blue); }
   border-radius: 20px;
   padding: 32px;
   backdrop-filter: blur(10px);
-  transition: all .3s ease;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
   box-shadow: var(--shadow);
+  will-change: transform, box-shadow;
 }
 .feature-card:hover {
   border-color: rgba(16,141,253,0.25);
   transform: translateY(-5px);
   box-shadow: 0 14px 34px rgba(20,33,61,0.12);
+}
+@media (hover: none) {
+  .feature-card {
+    transition: border-color .3s ease;
+  }
+  .feature-card:hover {
+    transform: none;
+    box-shadow: var(--shadow);
+  }
 }
 .feature-icon {
   width: 48px; height: 48px;
@@ -952,6 +994,25 @@ footer .foot-links a:hover { color: var(--brand-blue); }
   scrollbar-width: thin;
   scrollbar-color: rgba(16, 141, 253, 0.9) transparent;
   -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 640px) {
+  .screenshot-scroll {
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 10px 20px 30px;
+  }
+  .screenshot-item {
+    width: min(84vw, 260px);
+    box-shadow: 0 10px 24px rgba(20, 33, 61, 0.08);
+  }
+  .screenshot-item:hover {
+    transform: none;
+  }
+  .feature-card {
+    backdrop-filter: none;
+    padding: 24px;
+  }
 }
 
 .screenshot-scroll::-webkit-scrollbar {
