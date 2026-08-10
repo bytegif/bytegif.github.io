@@ -38,6 +38,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
   scroll-padding-top: calc(90px + env(safe-area-inset-top, 0px));
 }
@@ -50,9 +51,15 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   overflow-x: hidden;
-  width: 100%;
+  overflow-y: auto;
+  width: 100vw;
+  min-height: 100vh;
   position: relative;
   padding-top: calc(76px + env(safe-area-inset-top, 0px));
+}
+
+.apps-page {
+  overflow-x: hidden;
 }
 
 h1, h2, h3, .display {
@@ -261,7 +268,14 @@ nav ul a:hover { color: var(--brand-blue); }
 }
 
 /* ---------- section shell ---------- */
-section { padding: 96px 0; scroll-margin-top: calc(90px + env(safe-area-inset-top, 0px)); }
+section { padding: 96px 0; scroll-margin-top: calc(260px + env(safe-area-inset-top, 0px)); }
+@media(max-width:900px) {
+  section { padding: 76px 0; scroll-margin-top: calc(240px + env(safe-area-inset-top, 0px)); }
+}
+.apps-page section.section-head { padding-top: 24px; padding-bottom: 20px; }
+.apps-page .section-head { max-width: 900px; margin-bottom: 32px; }
+.apps-page .apps-filter { padding: 0 0 18px; }
+.apps-page .apps-section { padding-top: 0; }
 .section-head { max-width: 600px; margin-bottom: 56px; }
 .section-head .eyebrow { margin-bottom: 18px; }
 .section-head h2 { font-size: 36px; font-weight: 700; color: var(--text); line-height: 1.2; }
@@ -785,6 +799,67 @@ footer .foot-links a[href*="play.google.com"]:focus svg {
   }
 }
 
+.apps-filter {
+  padding: 0 0 32px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.filter-btn {
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s, border-color .2s, color .2s, background .2s;
+  min-width: 120px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  border-color: rgba(16,141,253,0.3);
+  color: var(--brand-blue);
+  background: rgba(16,141,253,0.06);
+  outline: none;
+}
+
+.filter-btn.active {
+  background: rgba(16,141,253,0.12);
+  border-color: rgba(16,141,253,0.25);
+  color: var(--brand-blue);
+}
+
+.filter-copy {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media(max-width:700px) {
+  .filter-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .filter-btn {
+    flex: 1 1 auto;
+    min-width: 120px;
+  }
+}
+
 /* coming soon card */
 .coming-soon-card {
   background: var(--surface-2);
@@ -825,6 +900,21 @@ footer .foot-links a[href*="play.google.com"]:focus svg {
   font-size: 14px;
   color: var(--text-soft);
   margin: 0;
+}
+
+/* section CTA */
+.section-cta {
+  padding: 24px 0 32px;
+  text-align: center;
+}
+
+.section-cta .wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.section-cta .btn-primary {
+  display: inline-flex;
 }
 
 /* about */
