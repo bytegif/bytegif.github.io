@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — OpenCast | ByteGif</title>
+  <meta name="description"
+    content="Privacy Policy for OpenCast by ByteGif. Learn how your data is handled when using our podcast and radio app.">
+  <link rel="icon" href="../images/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="../images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#108dfd">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="policy-body">
+
+  <!-- ambient glows -->
+  <div class="ambient-glow ambient-glow--blue"></div>
+  <div class="ambient-glow ambient-glow--green"></div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">
+          <img src="../images/main-logo.png" alt="ByteGif logo">
+          ByteGif
+        </a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./">OpenCast</a></li>
+        </ul>
+        <a class="nav-cta" href="./">← Back to App</a>
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="policy-container">
+      <div class="policy-header">
+        <img src="../images/opencast.webp" alt="OpenCast app icon" class="app-logo">
+        <h1>Privacy Policy for OpenCast</h1>
+        <p class="last-updated">Last updated: August 26, 2026</p>
+      </div>
+
+      <section class="policy-section">
+        <p><strong>OpenCast</strong> ("we", "our", or "us"), developed by <strong>ByteGif</strong>, is committed to protecting your privacy. This Privacy Policy explains how our mobile application OpenCast (the "App") collects, uses, stores, and protects your information when you use our services.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>1. Information We Collect</h2>
+
+        <h3>A. Information You Provide to Us</h3>
+        <ul>
+          <li><strong>Account Information:</strong> When you register an account, we collect your email address, display name, and avatar preference via Firebase Authentication.</li>
+          <li><strong>Guest Mode:</strong> You can use OpenCast as a Guest without creating an account or providing any personal information. Guest user data (such as local playback history, custom RSS feeds, and settings) remains strictly on your device.</li>
+          <li><strong>User-Generated Content &amp; Sync Data:</strong> For registered users, we sync your followed podcasts, liked episodes, custom playlists, playback progress, favorite radio stations, and episode comments to Google Cloud Firestore.</li>
+          <li><strong>Custom Content:</strong> If you add custom RSS feed URLs or custom radio stream URLs, these URLs are stored locally on your device (and synced to your personal cloud profile if signed in).</li>
+          <li><strong>Reports &amp; DMCA Submissions:</strong> If you submit a content report or copyright notice through the App, we collect the details provided in the report to review compliance.</li>
+        </ul>
+
+        <h3>B. Information Collected Automatically</h3>
+        <ul>
+          <li><strong>Crash &amp; Diagnostic Logs:</strong> We may collect anonymous crash logs and diagnostic performance reports via Firebase Crashlytics to fix bugs and improve app stability.</li>
+          <li><strong>Network Information:</strong> Basic network status is used solely to verify internet connectivity for streaming audio and loading podcast feeds.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the collected information for the following purposes:</p>
+        <ul>
+          <li>To provide core media playback and podcast streaming functionalities.</li>
+          <li>To synchronize your followed shows, playlists, history, and favorites across your signed-in devices.</li>
+          <li>To enable community features such as episode comments and likes.</li>
+          <li>To maintain app security, prevent abuse, and enforce our Content Guidelines &amp; DMCA compliance.</li>
+          <li>To diagnose technical errors, crashes, and optimize streaming performance.</li>
+        </ul>
+        <p><strong>We do NOT sell, rent, or monetize your personal data to third parties or advertisers.</strong></p>
+      </section>
+
+      <section class="policy-section">
+        <h2>3. Third-Party Services &amp; Content Providers</h2>
+        <p>OpenCast integrates with reputable third-party service providers to deliver streaming and infrastructure services:</p>
+        <ul>
+          <li>
+            <strong>Google Firebase (Google LLC):</strong> Used for secure user authentication (Firebase Authentication), cloud database synchronization (Cloud Firestore), and crash diagnostics (Firebase Crashlytics).
+            <br>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy &amp; Terms Policy</a>
+          </li>
+          <li><strong>Public Podcast RSS Feeds &amp; Audio Hosts:</strong> When you stream or download podcast episodes, your device connects directly to the audio host or content creator's server specified in the public RSS feed. Those external servers may log standard IP address requests according to their own privacy practices.</li>
+          <li><strong>Radio-Browser API:</strong> OpenCast connects to the community-driven Radio-Browser directory to search and stream publicly available live radio stations.</li>
+          <li><strong>Image Proxy &amp; CDN Services:</strong> To deliver fast image loading, reduced data consumption, and WebP format compression, podcast artwork images may be proxied through secure caching CDNs (such as wsrv.nl). No personal data is transmitted with these image requests.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>4. Device Permissions</h2>
+        <p>OpenCast requires the following minimal device permissions to function properly:</p>
+        <ul>
+          <li><strong>INTERNET:</strong> Required to search, fetch RSS feeds, stream podcasts, and stream online radio stations.</li>
+          <li><strong>ACCESS_NETWORK_STATE:</strong> Required to detect whether your device is connected to Wi-Fi or cellular data for stream management and download preferences.</li>
+          <li><strong>FOREGROUND_SERVICE &amp; FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> Required to maintain seamless audio playback when the app is minimized or running in the background.</li>
+          <li><strong>POST_NOTIFICATIONS (Android 13+):</strong> Required to display playback controls (play, pause, skip) on your lock screen and notification shade.</li>
+          <li><strong>WAKE_LOCK:</strong> Prevents audio streaming from cutting off when your screen turns off during playback.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>5. Data Retention &amp; Account Deletion</h2>
+        <p>We retain your data only for as long as your account remains active. You have full control over your data:</p>
+        <ul>
+          <li><strong>In-App Account Deletion:</strong> You can permanently delete your account at any time directly inside the App by navigating to <strong>Settings &rarr; Account &rarr; Delete Account</strong>.</li>
+          <li><strong>Complete Purge:</strong> When you delete your account, the App immediately purges all your cloud records from Google Cloud Firestore (including followed shows, likes, playlists, history, favorite radios, comments, and reports), deletes your authentication credentials from Firebase Authentication, and wipes all local database cache on your device.</li>
+          <li><strong>Guest Data:</strong> For guest users, clearing app data or uninstalling the app permanently removes all local history and preferences from your device.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>6. Security of Your Data</h2>
+        <p>We implement industry-standard security measures to safeguard your personal data. All communication between the App and Firebase servers is encrypted using Transport Layer Security (TLS/HTTPS). Authentication passwords are encrypted and managed securely by Google Firebase Authentication.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>7. Children's Privacy</h2>
+        <p>OpenCast is not intended for or directed towards children under the age of 13. We do not knowingly collect personal identifiable information from children under 13. If you believe a child has provided us with personal data, please contact us so we can promptly delete the information.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. We encourage you to review this page periodically for any updates.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us at:</p>
+        <ul>
+          <li><strong>App:</strong> OpenCast</li>
+          <li><strong>Developer:</strong> ByteGif</li>
+          <li><strong>Email:</strong> <a href="mailto:bytegif@gmail.com">bytegif@gmail.com</a></li>
+          <li><strong>Website:</strong> <a href="https://bytegif.github.io/opencast" target="_blank" rel="noopener noreferrer">https://bytegif.github.io/opencast</a></li>
+        </ul>
+      </section>
+
+      <div class="policy-footer">
+        <p>© 2026 OpenCast by ByteGif. All rights reserved.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img src="../images/main-logo.png" alt="ByteGif logo">
+        ByteGif
+      </a>
+      <p>© 2026 OpenCast by ByteGif. All rights reserved.</p>
+      <div class="foot-links">
+        <a href="/">Home</a>
+        <a href="./">OpenCast</a>
+        <a href="mailto:bytegif@gmail.com">Support</a>
+        <a href="https://www.facebook.com/bytegif" target="_blank" rel="noopener noreferrer" aria-label="ByteGif on Facebook" title="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#6b7280" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.89h-2.3v6.99C18.34 21.13 22 16.99 22 12z" />
+          </svg>
+        </a>
+        <a href="https://play.google.com/store/apps/dev?id=5212652438690411522" target="_blank" rel="noopener noreferrer" aria-label="ByteGif on Google Play" title="Google Play">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 2v20l18-10L3 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.querySelector('.menu-btn');
+      const navUl = document.querySelector('nav ul');
+
+      if (menuBtn && navUl) {
+        menuBtn.addEventListener('click', () => {
+          navUl.classList.toggle('active');
+          menuBtn.textContent = navUl.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navUl.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navUl.classList.remove('active');
+            menuBtn.textContent = '☰';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
