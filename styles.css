@@ -59,7 +59,23 @@ body {
 }
 
 .apps-page {
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
+}
+
+.apps-page main { flex: 1; }
+
+.apps-page .ambient-glow {
+  position: fixed;
+  filter: none;
+  opacity: 1;
+}
+.apps-page .ambient-glow--blue {
+  background: radial-gradient(circle, rgba(42,216,255,0.12), transparent 70%);
+}
+.apps-page .ambient-glow--green {
+  background: radial-gradient(circle, rgba(107,77,255,0.12), transparent 70%);
 }
 
 h1, h2, h3, .display {
