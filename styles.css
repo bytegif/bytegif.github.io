@@ -66,6 +66,65 @@ body {
 
 .apps-page main { flex: 1; }
 
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.not-found-page main { flex: 1; }
+
+.not-found {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 76px - env(safe-area-inset-top, 0px));
+  display: grid;
+  place-items: center;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.not-found__content {
+  width: min(100%, 680px);
+}
+
+.not-found__code {
+  color: transparent;
+  background: linear-gradient(135deg, var(--brand-cyan), var(--brand-blue) 55%, var(--brand-violet));
+  background-clip: text;
+  -webkit-background-clip: text;
+  font: 800 clamp(100px, 24vw, 190px)/0.95 'Sora', sans-serif;
+  letter-spacing: -0.09em;
+  margin: 0 0 28px;
+  opacity: 0.18;
+}
+
+.not-found .eyebrow {
+  margin-bottom: 20px;
+}
+
+.not-found h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.not-found h1 .accent {
+  color: var(--brand-blue);
+}
+
+.not-found p {
+  max-width: 500px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 17px;
+}
+
+.not-found .hero-actions {
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .apps-page .ambient-glow {
   position: fixed;
   filter: none;
