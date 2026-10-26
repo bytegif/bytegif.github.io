@@ -132,6 +132,18 @@
             <span class="app-card__link">Explore app →</span>
           </div>
         </a>
+
+        <a class="app-card" href="sendchat/" data-category="android macos">
+          <div class="app-card__banner">
+            <img src="images/sendchat.webp" alt="SendChat app icon">
+          </div>
+          <div class="app-card__body">
+            <div class="app-card__badge">● CROSS-PLATFORM APP</div>
+            <h3 class="app-card__title">SendChat</h3>
+            <p class="app-card__desc">Chat and share files directly between your devices over local Wi-Fi, with end-to-end encryption and no cloud account.</p>
+            <span class="app-card__link">Explore app →</span>
+          </div>
+        </a>
       </div>
     </section>
   </main>
@@ -191,7 +203,7 @@
           button.classList.add('active');
 
           cards.forEach(card => {
-            card.style.display = filter === 'all' || card.dataset.category === filter ? 'block' : 'none';
+            card.style.display = filter === 'all' || card.dataset.category.split(/\s+/).includes(filter) ? 'block' : 'none';
           });
         });
       });

@@ -1150,7 +1150,8 @@ footer .foot-links a[href*="play.google.com"]:focus svg {
   background: var(--surface);
 }
 
-.mac-cleaner-page .screenshot-scroll {
+.mac-cleaner-page .screenshot-scroll,
+.sendchat-page .screenshot-scroll {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
@@ -1158,23 +1159,32 @@ footer .foot-links a[href*="play.google.com"]:focus svg {
   padding: 10px 0 30px;
 }
 
-.mac-cleaner-page .screenshot-item {
+.mac-cleaner-page .screenshot-item,
+.sendchat-page .screenshot-item {
   width: 100%;
   margin: 0;
   scroll-snap-align: unset;
 }
 
-.mac-cleaner-page .screenshot-item img {
+.mac-cleaner-page .screenshot-item img,
+.sendchat-page .screenshot-item img {
   width: 100%;
   height: auto;
 }
 
 @media(max-width:640px) {
-  .mac-cleaner-page .screenshot-scroll {
+  .mac-cleaner-page .screenshot-scroll,
+  .sendchat-page .screenshot-scroll {
     grid-template-columns: 1fr;
     gap: 18px;
     padding: 10px 0 24px;
   }
+}
+
+.sendchat-platforms {
+  margin: 24px 0 0;
+  color: var(--text-soft);
+  font-size: 14px;
 }
 
 .screenshot-item:hover {
