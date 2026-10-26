@@ -1150,9 +1150,36 @@ footer .foot-links a[href*="play.google.com"]:focus svg {
   background: var(--surface);
 }
 
+.mac-cleaner-page .screenshot-scroll {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  overflow: visible;
+  padding: 10px 0 30px;
+}
+
+.mac-cleaner-page .screenshot-item {
+  width: 100%;
+  margin: 0;
+  scroll-snap-align: unset;
+}
+
+.mac-cleaner-page .screenshot-item img {
+  width: 100%;
+  height: auto;
+}
+
+@media(max-width:640px) {
+  .mac-cleaner-page .screenshot-scroll {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 10px 0 24px;
+  }
+}
+
 .screenshot-item:hover {
   transform: translateY(-4px);
-  border-color: rgba(16, 141, 253, 0.25);
+  border-color: rgba(16,141,253,0.25);
 }
 
 .screenshot-item img {
