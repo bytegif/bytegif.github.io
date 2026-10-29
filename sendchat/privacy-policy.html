@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — SendChat | ByteGif</title>
+  <meta name="description"
+    content="Privacy Policy for SendChat by ByteGif. Learn how your data is handled when using our private, peer-to-peer messaging and file-sharing app.">
+  <link rel="canonical" href="https://bytegif.com/sendchat/privacy-policy.html">
+  <link rel="icon" href="../images/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="../images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#108dfd">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="policy-body">
+  <div class="ambient-glow ambient-glow--blue"></div>
+  <div class="ambient-glow ambient-glow--green"></div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">
+          <img src="../images/main-logo.png" alt="ByteGif logo">
+          ByteGif
+        </a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./">SendChat</a></li>
+        </ul>
+        <a class="nav-cta" href="./">← Back to App</a>
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="policy-container">
+      <div class="policy-header">
+        <img src="../images/sendchat.webp" alt="SendChat app icon" class="app-logo">
+        <h1>Privacy Policy for SendChat</h1>
+        <p class="last-updated">Last updated: October 29, 2026</p>
+      </div>
+
+      <section class="policy-section">
+        <p><strong>SendChat</strong> ("we", "our", or "the app"), developed by <strong>ByteGif</strong>, is committed to safeguarding your privacy. This Privacy Policy details our data collection, usage, and permission practices for the SendChat mobile and desktop applications.</p>
+        <p><strong>Core principle:</strong> SendChat is an offline-first, local peer-to-peer (P2P) utility. We do not operate external servers or store your data in the cloud, and we do not collect, track, share, or sell your personal information.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>1. Data Collection and Transmission</h2>
+        <p>SendChat is designed so that your data remains under your control:</p>
+        <ul>
+          <li><strong>No cloud storage:</strong> Chat messages, media, and files are transferred directly between devices over your local Wi-Fi or hotspot network via encrypted direct sockets (TCP/IP).</li>
+          <li><strong>No user accounts:</strong> You do not need an email, phone number, password, or third-party account to use SendChat.</li>
+          <li><strong>No tracking SDKs:</strong> SendChat does not include advertising SDKs, behavioral tracking tools, or telemetry tools.</li>
+          <li><strong>No central servers:</strong> We do not operate relay servers that inspect, log, or cache the contents of your communications.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>2. Information Accessed on Your Device</h2>
+        <p>SendChat accesses device resources needed for actions you choose to perform:</p>
+        <ul>
+          <li><strong>Files and media:</strong> Accessed when you select files, photos, videos, or documents to share. Received files are saved to your device's designated downloads folder.</li>
+          <li><strong>Device identification:</strong> Your chosen device display name and platform type (e.g., Android, Windows, macOS, Linux) are broadcast via Multicast DNS (mDNS) and UDP discovery on your local network so nearby devices can identify each other.</li>
+          <li><strong>Local message history:</strong> Conversations and transfer logs are stored locally on your device in an encrypted SQLite database. This data is not sent to us or any third party.</li>
+          <li><strong>Clipboard content:</strong> When you enable the optional Clipboard Sync feature, text copied on one paired device can be transferred directly to another paired device over your local network. Clipboard contents are not polled, uploaded, or stored externally.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>3. Android Permissions</h2>
+        <p>To provide peer-to-peer sharing and transfer management, SendChat requests the following permissions on Android:</p>
+        <ul>
+          <li><strong>NEARBY_WIFI_DEVICES / ACCESS_NETWORK_STATE / CHANGE_WIFI_MULTICAST_STATE:</strong> Used to discover nearby devices on the local Wi-Fi network using mDNS and UDP.</li>
+          <li><strong>FOREGROUND_SERVICE &amp; FOREGROUND_SERVICE_DATA_SYNC:</strong> Used to keep active file transfers running in the background while displaying an ongoing notification.</li>
+          <li><strong>REQUEST_INSTALL_PACKAGES:</strong> Allows you to install application packages (.apk files) received from your paired devices, after you choose to do so and confirm.</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> Required on Android 13 and later to notify you about incoming transfer requests, transfer progress, and completed downloads.</li>
+          <li><strong>CAMERA (optional):</strong> Used to scan pairing QR codes on other devices for verification. Camera images and video frames are not recorded or transmitted.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>4. Security and Cryptography</h2>
+        <p>Direct local connections between devices use the following security measures:</p>
+        <ul>
+          <li><strong>Key exchange:</strong> Ephemeral key exchange using Elliptic Curve Diffie-Hellman (ECDH).</li>
+          <li><strong>Encryption:</strong> End-to-end authenticated encryption via AES-256-GCM for packets, messages, and file streams.</li>
+          <li><strong>Pairing verification:</strong> Mutual authentication using a 6-digit confirmation PIN or QR code to help protect against unauthorized connections and local network snooping.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>5. Data Retention and User Control</h2>
+        <ul>
+          <li><strong>Deleting chats and transfers:</strong> You can delete individual messages or clear conversation histories in the app.</li>
+          <li><strong>Complete data erasure:</strong> Because data is stored on your device, uninstalling the app or clearing its storage in your device settings removes locally stored chats, keys, and pairings.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>6. Third-Party Sharing</h2>
+        <p>We do not share, disclose, monetize, or sell user personal data or file contents to third parties.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>7. Children's Privacy</h2>
+        <p>SendChat is a local network utility and does not collect personal data from users, including children under the age of 13.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy to reflect app updates or regulatory requirements. Changes will be posted on this page with a revised "Last updated" date.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>9. Contact Us</h2>
+        <p>If you have questions or feedback about this Privacy Policy or SendChat, contact us at <a href="mailto:bytegif@gmail.com">bytegif@gmail.com</a> or visit the <a href="https://github.com/abzgif/SendChat" target="_blank" rel="noopener noreferrer">SendChat project on GitHub</a>.</p>
+      </section>
+
+      <div class="policy-footer">
+        <p>© 2026 SendChat by ByteGif. All rights reserved.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img src="../images/main-logo.png" alt="ByteGif logo">
+        ByteGif
+      </a>
+      <p>© 2026 SendChat by ByteGif.</p>
+      <div class="foot-links">
+        <a href="/">Home</a>
+        <a href="./">SendChat</a>
+        <a href="https://github.com/abzgif/SendChat" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:bytegif@gmail.com">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.querySelector('.menu-btn');
+      const navUl = document.querySelector('nav ul');
+
+      if (menuBtn && navUl) {
+        menuBtn.addEventListener('click', () => {
+          navUl.classList.toggle('active');
+          menuBtn.textContent = navUl.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navUl.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navUl.classList.remove('active');
+            menuBtn.textContent = '☰';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
