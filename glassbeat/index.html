@@ -4,28 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GlassBeat — Elegant Glassmorphic Music Player | ByteGif</title>
+  <title>GlassBeat — Elegant Music Player for Android | ByteGif</title>
   <meta name="description"
-    content="Experience your music in style with GlassBeat. A gorgeous, glassmorphic offline music player for Android featuring dynamic themes and high-fidelity audio playback.">
+    content="Experience your music in style with GlassBeat. A translucent offline music player for Android featuring dynamic themes and high-fidelity audio playback.">
   <link rel="canonical" href="https://bytegif.com/glassbeat/">
   <link rel="icon" href="../images/favicon-16.png" sizes="16x16" type="image/png">
   <link rel="icon" href="../images/favicon-32.png" sizes="32x32" type="image/png">
-  <meta name="theme-color" content="#108dfd">
+  <meta name="theme-color" content="#fafafa">
+  <script>
+    (function () {
+      const saved = localStorage.getItem('bytegif-theme');
+      if (saved === 'dark' || saved === 'light') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-
 </head>
 
 <body>
-
-  <!-- ambient glows -->
-  <div class="ambient-glow ambient-glow--blue"></div>
-  <div class="ambient-glow ambient-glow--green"></div>
-
   <header>
     <div class="wrap">
       <nav>
@@ -35,30 +37,40 @@
         </a>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/apps.html">Apps</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#screenshots">Screenshots</a></li>
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
-        <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.bytegif.glassbeat" target="_blank" rel="noopener noreferrer">Get on Play
-          Store →</a>
-        <button class="menu-btn" aria-label="Open menu">☰</button>
+        <div class="nav-actions">
+          <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.bytegif.glassbeat" target="_blank" rel="noopener noreferrer">Get on Play Store →</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle dark or light mode" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <button class="menu-btn" aria-label="Open menu">☰</button>
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="app-hero">
       <div class="wrap app-hero-inner">
         <div class="eyebrow"><span class="dot"></span> ANDROID APP</div>
         <div class="app-icon-wrap">
           <img src="../images/glassbeat.webp" alt="GlassBeat app icon">
         </div>
-        <h1>Sleek Music Playback, Beautifully <span class="accent">Translucent</span></h1>
-        <p class="lead">A premium local music player for Android with listen history, a built-in tag editor, an equalizer, a sleep timer, and a stunning glass design for everyday listening.</p>
+        <h1>Sleek music playback, <span class="accent">beautifully translucent.</span></h1>
+        <p class="lead">A local music player for Android with listen history, a built-in tag editor, an equalizer, a sleep timer, and a clean translucent interface for everyday listening.</p>
         <div class="cta-group">
           <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.bytegif.glassbeat" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
@@ -69,19 +81,19 @@
       </div>
     </section>
 
-    <!-- FEATURES -->
     <section id="features" class="features-section">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow blue"><span class="dot"></span> FEATURES</div>
-          <h2>Designed to Elevate Your Music</h2>
-          <p>GlassBeat brings together smart listening tools, polished controls, and a beautiful glassmorphic experience for every session.</p>
+          <div class="eyebrow"><span class="dot"></span> FEATURES</div>
+          <h2>Designed for your local music library.</h2>
+          <p>GlassBeat brings together smart listening tools, responsive controls, and offline playback for every session.</p>
         </div>
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M13 3L4 14h5v7l9-11h-5V3z" fill="currentColor"/>
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <polyline points="12 7 12 12 15 15"/>
               </svg>
             </div>
             <h3>Listen History</h3>
@@ -89,9 +101,10 @@
           </div>
 
           <div class="feature-card">
-            <div class="feature-icon green">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 4v10h10V7H7zm2 2h6v2H9V9zm0 4h4v2H9v-2z" fill="currentColor"/>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                <line x1="7" y1="7" x2="7.01" y2="7"/>
               </svg>
             </div>
             <h3>Built-in Tag Editor</h3>
@@ -100,38 +113,49 @@
 
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M12 3l7 4v5c0 4.2-2.7 7.9-7 9-4.3-1.1-7-4.8-7-9V7l7-4z" fill="currentColor"/>
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="4" y1="21" x2="4" y2="14"/>
+                <line x1="4" y1="10" x2="4" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12" y2="3"/>
+                <line x1="20" y1="21" x2="20" y2="16"/>
+                <line x1="20" y1="12" x2="20" y2="3"/>
+                <line x1="1" y1="14" x2="7" y2="14"/>
+                <line x1="9" y1="8" x2="15" y2="8"/>
+                <line x1="17" y1="16" x2="23" y2="16"/>
               </svg>
             </div>
             <h3>Equalizer</h3>
-            <p>Fine-tune your sound with custom audio settings that help you match the mood, device, or genre you’re listening to.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon green">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M12 5a7 7 0 0 1 7 7c0 2.2-1 4.2-2.6 5.4l-1.4-1.4A4.9 4.9 0 0 0 17 12a5 5 0 0 0-10 0c0 1.2.4 2.3 1.2 3.2L6.8 17A7 7 0 0 1 12 5zm0 4a3 3 0 0 1 3 3c0 .8-.3 1.5-.8 2l-1.4-1.4A1 1 0 0 0 12 12a1 1 0 0 0-1 1c0 .3.1.5.2.7L9.8 14A3 3 0 0 1 12 9z" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>Sleep Timer</h3>
-            <p>Set playback to stop automatically so your music can fade out while you rest or drift off.</p>
+            <p>Fine-tune your sound with custom audio settings that help you match the mood, headphones, or genre you’re listening to.</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zm2 2v8h12V8H6z" fill="currentColor"/>
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
               </svg>
             </div>
-            <h3>Glass Design</h3>
-            <p>Enjoy a polished glassmorphic UI with smooth visuals, dynamic light effects, and immersive controls.</p>
+            <h3>Sleep Timer</h3>
+            <p>Set playback to stop automatically so your music can fade out while you rest.</p>
           </div>
 
           <div class="feature-card">
-            <div class="feature-icon green">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6-6h4V4h-4v4zm6 0h4V4h-4v4zm0 6h4v-4h-4v4zm-6 6h4v-4h-4v4zm6 0h4v-4h-4v4z" fill="currentColor"/>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18"/>
+              </svg>
+            </div>
+            <h3>Translucent UI</h3>
+            <p>Enjoy a clean glassmorphic UI with adaptive color themes and intuitive playback controls.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18V5l12-2v13"/>
+                <circle cx="6" cy="18" r="3"/>
+                <circle cx="18" cy="16" r="3"/>
               </svg>
             </div>
             <h3>Simultaneous Audio Playback</h3>
@@ -141,52 +165,48 @@
       </div>
     </section>
 
-    <!-- SCREENSHOTS SHOWCASE -->
     <section id="screenshots" class="app-screenshot-band">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow blue"><span class="dot"></span> SCREENSHOTS</div>
-          <h2>Explore the Interface</h2>
-          <p>Take a glance at GlassBeat's elegant layouts, dynamic translucent screens, and vibrant music player controls.</p>
+          <div class="eyebrow"><span class="dot"></span> SCREENSHOTS</div>
+          <h2>Explore the interface.</h2>
+          <p>Take a glance at GlassBeat's layouts, translucent screens, and music player controls.</p>
         </div>
         <div class="screenshot-scroll">
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot1.webp" alt="GlassBeat screenshot 1">
+            <img src="screenshots/glassbeat-screenshot1.webp" alt="GlassBeat screenshot 1" loading="lazy">
           </div>
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot2.webp" alt="GlassBeat screenshot 2">
+            <img src="screenshots/glassbeat-screenshot2.webp" alt="GlassBeat screenshot 2" loading="lazy">
           </div>
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot3.webp" alt="GlassBeat screenshot 3">
+            <img src="screenshots/glassbeat-screenshot3.webp" alt="GlassBeat screenshot 3" loading="lazy">
           </div>
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot4.webp" alt="GlassBeat screenshot 4">
+            <img src="screenshots/glassbeat-screenshot4.webp" alt="GlassBeat screenshot 4" loading="lazy">
           </div>
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot5.webp" alt="GlassBeat screenshot 5">
+            <img src="screenshots/glassbeat-screenshot5.webp" alt="GlassBeat screenshot 5" loading="lazy">
           </div>
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot6.webp" alt="GlassBeat screenshot 6">
+            <img src="screenshots/glassbeat-screenshot6.webp" alt="GlassBeat screenshot 6" loading="lazy">
           </div>
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot7.webp" alt="GlassBeat screenshot 7">
+            <img src="screenshots/glassbeat-screenshot7.webp" alt="GlassBeat screenshot 7" loading="lazy">
           </div>
           <div class="screenshot-item">
-            <img src="screenshots/glassbeat-screenshot8.webp" alt="GlassBeat screenshot 8">
+            <img src="screenshots/glassbeat-screenshot8.webp" alt="GlassBeat screenshot 8" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
     <section id="download">
       <div class="wrap">
         <div class="cta">
-          <div class="eyebrow" style="background:rgba(62,189,89,0.12);border-color:rgba(62,189,89,0.3);">
-            <span class="dot"></span> DOWNLOAD
-          </div>
-          <h2>Ready to elevate your music experience?</h2>
-          <p>GlassBeat is free on the Google Play Store. Download it now to experience your music through a stunning translucent interface.</p>
+          <div class="eyebrow"><span class="dot"></span> DOWNLOAD</div>
+          <h2>Listen to your local library with GlassBeat.</h2>
+          <p>GlassBeat is free on the Google Play Store. Download it now for offline playback and built-in tag management.</p>
           <div class="hero-actions">
             <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.bytegif.glassbeat" target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -214,24 +234,28 @@
       <p>© 2026 GlassBeat by ByteGif. All rights reserved.</p>
       <div class="foot-links">
         <a href="/">Home</a>
+        <a href="/apps.html">Apps</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="mailto:bytegif@gmail.com">Support</a>
-          <a href="https://www.facebook.com/bytegif" target="_blank" rel="noopener noreferrer" aria-label="ByteGif on Facebook" title="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path fill="#6b7280" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.89h-2.3v6.99C18.34 21.13 22 16.99 22 12z" />
-            </svg>
-          </a>
-          <a href="https://play.google.com/store/apps/dev?id=5212652438690411522" target="_blank" rel="noopener noreferrer" aria-label="ByteGif on Google Play" title="Google Play">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M3 2v20l18-10L3 2z" />
-            </svg>
-          </a>
       </div>
     </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const themeBtn = document.querySelector('.theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const root = document.documentElement;
+          const current = root.getAttribute('data-theme');
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = current ? current === 'dark' : systemDark;
+          const next = isDark ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          localStorage.setItem('bytegif-theme', next);
+        });
+      }
+
       const menuBtn = document.querySelector('.menu-btn');
       const navUl = document.querySelector('nav ul');
 

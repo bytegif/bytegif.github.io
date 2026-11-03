@@ -4,28 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteGif | Android &amp; macOS Apps</title>
+  <title>ByteGif — Minimal Android &amp; macOS Apps</title>
   <meta name="description"
-    content="ByteGif builds thoughtful Android and macOS apps that solve real problems. Explore our collection of tools and utilities.">
+    content="ByteGif builds thoughtful Android and macOS apps that solve real problems. Explore our collection of fast, privacy-first tools and utilities.">
   <link rel="canonical" href="https://bytegif.com/">
   <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
   <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
-  <meta name="theme-color" content="#108dfd">
+  <meta name="theme-color" content="#fafafa">
+  <script>
+    (function () {
+      const saved = localStorage.getItem('bytegif-theme');
+      if (saved === 'dark' || saved === 'light') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
-
-  <!-- ambient glows -->
-  <div class="ambient-glow ambient-glow--blue"></div>
-  <div class="ambient-glow ambient-glow--green"></div>
-
   <header>
     <div class="wrap">
       <nav>
@@ -35,11 +37,23 @@
         </a>
         <ul>
           <li><a href="#apps">Apps</a></li>
+          <li><a href="apps.html">Directory</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="nav-cta" href="#contact">Get in touch →</a>
-        <button class="menu-btn" aria-label="Open menu">☰</button>
+        <div class="nav-actions">
+          <a class="nav-cta" href="#contact">Get in touch →</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle dark or light mode" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <button class="menu-btn" aria-label="Open menu">☰</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -49,43 +63,42 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow"><span class="dot"></span> APP SHOWCASE</div>
-          <h1>Apps that solve <span class="accent">real problems.</span></h1>
-          <p class="lead">ByteGif builds thoughtful Android and macOS tools — designed with care, built for performance, and
-            shipped to the Play Store and GitHub.</p>
+          <div class="eyebrow"><span class="dot"></span> INDEPENDENT SOFTWARE STUDIO</div>
+          <h1>Focused tools for <span class="accent">everyday workflows.</span></h1>
+          <p class="lead">ByteGif builds native Android and macOS utilities—designed with restraint, engineered for speed, and built to keep your data on your device.</p>
           <div class="hero-actions">
             <a class="btn-primary" href="#apps">Explore apps ↓</a>
-            <a class="btn-ghost" href="#contact">Contact us</a>
+            <a class="btn-ghost" href="apps.html">Browse directory</a>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="hero-visual__grid">
-            <a href="audio-tag-editor/" class="grid-slot active">
+          <div class="hero-visual__grid" aria-label="ByteGif app icons">
+            <a href="audio-tag-editor/" class="grid-slot" title="Audio Tag Editor">
               <img src="images/audio-tag-editor.webp" alt="Audio Tag Editor">
             </a>
-            <a href="glassbeat/" class="grid-slot active">
+            <a href="glassbeat/" class="grid-slot" title="GlassBeat">
               <img src="images/glassbeat.webp" alt="GlassBeat">
             </a>
-            <a href="real-mirror/" class="grid-slot active">
+            <a href="real-mirror/" class="grid-slot" title="Real Mirror">
               <img src="images/real-mirror.webp" alt="Real Mirror">
             </a>
-            <a href="image-resizer/" class="grid-slot active">
+            <a href="image-resizer/" class="grid-slot" title="Image Resizer">
               <img src="images/image-resizer.webp" alt="Image Resizer">
             </a>
-            <a href="mac-network-monitor/" class="grid-slot active">
+            <a href="mac-network-monitor/" class="grid-slot" title="Mac Network Monitor">
               <img src="images/mac-network-monitor.webp" alt="Mac Network Monitor">
             </a>
-            <a href="mac-cleaner/" class="grid-slot active">
+            <a href="mac-cleaner/" class="grid-slot" title="CleanMac">
               <img src="images/cleanmac.webp" alt="CleanMac">
             </a>
-            <a href="#apps" class="grid-slot active">
-              <img src="images/tong-shop.webp" alt="Tong Shop">
+            <a href="awesome-downloader/" class="grid-slot" title="Awesome Downloader">
+              <img src="images/awesome-downloader.svg" alt="Awesome Downloader">
             </a>
-            <a href="opencast/" class="grid-slot active">
+            <a href="opencast/" class="grid-slot" title="OpenCast">
               <img src="images/opencast.webp" alt="OpenCast">
             </a>
-            <a href="sendchat/" class="grid-slot active">
+            <a href="sendchat/" class="grid-slot" title="SendChat">
               <img src="images/sendchat.webp" alt="SendChat">
             </a>
           </div>
@@ -97,101 +110,144 @@
     <section id="apps">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span class="dot"></span> OUR APPS</div>
-          <h2>Tools you'll actually use.</h2>
-          <p>Every app is built with a focus on doing one thing really well — offline-first, privacy-respecting, and
-            beautifully designed.</p>
+          <div class="eyebrow"><span class="dot"></span> RELEASES</div>
+          <h2>Software you'll actually use.</h2>
+          <p>Every utility focuses on doing one job well—offline-first, lightweight, and free of unnecessary bloat.</p>
         </div>
+
         <div class="apps-grid">
-          <!-- Audio Tag Editor -->
-          <a class="app-card" href="audio-tag-editor/" id="app-audio-tag-editor">
-            <div class="app-card__banner">
-              <img src="images/audio-tag-editor.webp" alt="Audio Tag Editor icon">
+          <!-- SendChat -->
+          <a class="app-card" href="sendchat/" id="app-sendchat">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/sendchat.webp" alt="SendChat icon">
+              </div>
+              <span class="app-card__badge">Cross-Platform</span>
             </div>
             <div class="app-card__body">
-              <div class="app-card__badge">● ANDROID APP</div>
-              <h3 class="app-card__title">Audio Tag Editor</h3>
-              <p class="app-card__desc">Edit audio tags, album art, and metadata of your music files — completely
-                offline. A fast, secure Android utility for organizing your library.</p>
-              <span class="app-card__link">Learn more →</span>
+              <h3 class="app-card__title">SendChat</h3>
+              <p class="app-card__desc">Chat and share files directly between devices over local Wi-Fi with end-to-end encryption and no cloud account.</p>
+              <span class="app-card__link">View app →</span>
             </div>
           </a>
 
-          <!-- GlassBeat -->
-          <a class="app-card" href="glassbeat/" id="app-glassbeat">
-            <div class="app-card__banner">
-              <img src="images/glassbeat.webp" alt="GlassBeat icon">
+          <!-- Awesome Downloader -->
+          <a class="app-card" href="awesome-downloader/" id="app-awesome-downloader">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/awesome-downloader.svg" alt="Awesome Downloader icon">
+              </div>
+              <span class="app-card__badge">macOS</span>
             </div>
             <div class="app-card__body">
-              <div class="app-card__badge">● ANDROID APP</div>
-              <h3 class="app-card__title">GlassBeat</h3>
-              <p class="app-card__desc">A gorgeous local music player for Android. Experience your music through a stunning glassmorphic interface, dynamic color themes, and high-fidelity offline playback.</p>
-              <span class="app-card__link">Learn more →</span>
-            </div>
-          </a>
-
-          <!-- Image Resizer -->
-          <a class="app-card" href="image-resizer/" id="app-image-resizer">
-            <div class="app-card__banner">
-              <img src="images/image-resizer.webp" alt="Image Resizer icon">
-            </div>
-            <div class="app-card__body">
-              <div class="app-card__badge">● ANDROID APP</div>
-              <h3 class="app-card__title">Image Resizer</h3>
-              <p class="app-card__desc">Resize, crop, and compress photos locally on your device. A privacy-first utility that keeps your images offline and optimized.</p>
-              <span class="app-card__link">Learn more →</span>
-            </div>
-          </a>
-
-          <!-- Mac Network Monitor -->
-          <a class="app-card" href="mac-network-monitor/" id="app-mac-network-monitor">
-            <div class="app-card__banner">
-              <img src="images/mac-network-monitor.webp" alt="Mac Network Monitor icon">
-            </div>
-            <div class="app-card__body">
-              <div class="app-card__badge">● MACOS APP</div>
-              <h3 class="app-card__title">Mac Network Monitor</h3>
-              <p class="app-card__desc">A lightweight native macOS menu bar app that shows real-time upload and download speeds in a polished, glassmorphic dashboard.</p>
-              <span class="app-card__link">Learn more →</span>
+              <h3 class="app-card__title">Awesome Downloader</h3>
+              <p class="app-card__desc">Open-source download manager for Mac with segmented transfers, pause and resume, scheduling, and browser video capture.</p>
+              <span class="app-card__link">View app →</span>
             </div>
           </a>
 
           <!-- CleanMac -->
           <a class="app-card" href="mac-cleaner/" id="app-cleanmac">
-            <div class="app-card__banner">
-              <img src="images/cleanmac.webp" alt="CleanMac icon">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/cleanmac.webp" alt="CleanMac icon">
+              </div>
+              <span class="app-card__badge">macOS</span>
             </div>
             <div class="app-card__body">
-              <div class="app-card__badge">● MACOS APP</div>
               <h3 class="app-card__title">CleanMac</h3>
-              <p class="app-card__desc">A native macOS system cleaner for reclaiming storage, removing app leftovers, finding duplicate files, and cleaning developer artifacts.</p>
-              <span class="app-card__link">Learn more →</span>
+              <p class="app-card__desc">Native macOS system cleaner for reclaiming storage, removing app leftovers, finding duplicates, and cleaning developer caches.</p>
+              <span class="app-card__link">View app →</span>
+            </div>
+          </a>
+
+          <!-- Mac Network Monitor -->
+          <a class="app-card" href="mac-network-monitor/" id="app-mac-network-monitor">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/mac-network-monitor.webp" alt="Mac Network Monitor icon">
+              </div>
+              <span class="app-card__badge">macOS</span>
+            </div>
+            <div class="app-card__body">
+              <h3 class="app-card__title">Mac Network Monitor</h3>
+              <p class="app-card__desc">Lightweight native macOS menu bar utility displaying real-time upload and download speeds with detailed interface metrics.</p>
+              <span class="app-card__link">View app →</span>
+            </div>
+          </a>
+
+          <!-- Audio Tag Editor -->
+          <a class="app-card" href="audio-tag-editor/" id="app-audio-tag-editor">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/audio-tag-editor.webp" alt="Audio Tag Editor icon">
+              </div>
+              <span class="app-card__badge">Android</span>
+            </div>
+            <div class="app-card__body">
+              <h3 class="app-card__title">Audio Tag Editor</h3>
+              <p class="app-card__desc">Edit audio tags, album art, and metadata across your music files completely offline with batch editing support.</p>
+              <span class="app-card__link">View app →</span>
+            </div>
+          </a>
+
+          <!-- GlassBeat -->
+          <a class="app-card" href="glassbeat/" id="app-glassbeat">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/glassbeat.webp" alt="GlassBeat icon">
+              </div>
+              <span class="app-card__badge">Android</span>
+            </div>
+            <div class="app-card__body">
+              <h3 class="app-card__title">GlassBeat</h3>
+              <p class="app-card__desc">Local music player for Android featuring a translucent interface, built-in equalizer, tag editor, and offline playback.</p>
+              <span class="app-card__link">View app →</span>
             </div>
           </a>
 
           <!-- OpenCast -->
           <a class="app-card" href="opencast/" id="app-opencast">
-            <div class="app-card__banner">
-              <img src="images/opencast.webp" alt="OpenCast icon">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/opencast.webp" alt="OpenCast icon">
+              </div>
+              <span class="app-card__badge">Android</span>
             </div>
             <div class="app-card__body">
-              <div class="app-card__badge">● ANDROID APP</div>
               <h3 class="app-card__title">OpenCast</h3>
-              <p class="app-card__desc">Discover millions of podcasts, stream live global radio stations, and sync your favorite shows with ease.</p>
-              <span class="app-card__link">Learn more →</span>
+              <p class="app-card__desc">Discover podcasts, stream live global radio stations, download episodes offline, and sync across devices.</p>
+              <span class="app-card__link">View app →</span>
             </div>
           </a>
 
-          <!-- SendChat -->
-          <a class="app-card" href="sendchat/" id="app-sendchat">
-            <div class="app-card__banner">
-              <img src="images/sendchat.webp" alt="SendChat app icon">
+          <!-- Image Resizer -->
+          <a class="app-card" href="image-resizer/" id="app-image-resizer">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/image-resizer.webp" alt="Image Resizer icon">
+              </div>
+              <span class="app-card__badge">Android</span>
             </div>
             <div class="app-card__body">
-              <div class="app-card__badge">● CROSS-PLATFORM APP</div>
-              <h3 class="app-card__title">SendChat</h3>
-              <p class="app-card__desc">Chat and share files directly between your devices over local Wi-Fi, with end-to-end encryption and no cloud account.</p>
-              <span class="app-card__link">Learn more →</span>
+              <h3 class="app-card__title">Image Resizer</h3>
+              <p class="app-card__desc">Resize, crop, and compress photos locally on your Android device to save storage while keeping images private.</p>
+              <span class="app-card__link">View app →</span>
+            </div>
+          </a>
+
+          <!-- Real Mirror -->
+          <a class="app-card" href="real-mirror/" id="app-real-mirror">
+            <div class="app-card__top">
+              <div class="app-card__banner">
+                <img src="images/real-mirror.webp" alt="Real Mirror icon">
+              </div>
+              <span class="app-card__badge">Android</span>
+            </div>
+            <div class="app-card__body">
+              <h3 class="app-card__title">Real Mirror</h3>
+              <p class="app-card__desc">See your true, un-reversed reflection in real time, capture photos and videos, and keep your camera feed offline.</p>
+              <span class="app-card__link">View app →</span>
             </div>
           </a>
         </div>
@@ -200,7 +256,7 @@
 
     <section class="section-cta">
       <div class="wrap">
-        <a class="btn-primary" href="apps.html">See All Apps</a>
+        <a class="btn-ghost" href="apps.html">Filter apps by platform →</a>
       </div>
     </section>
 
@@ -208,42 +264,38 @@
     <section id="about">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow blue"><span class="dot"></span> ABOUT BYTEGIF</div>
-          <h2>Small studio, big focus.</h2>
-          <p>ByteGif is an independent brand building Android and macOS apps that prioritize user privacy, performance, and clean
-            design.</p>
+          <div class="eyebrow"><span class="dot"></span> PRINCIPLES</div>
+          <h2>Small studio, sharp focus.</h2>
+          <p>ByteGif is an independent studio building Android and macOS utilities that prioritize privacy, native performance, and clear design.</p>
         </div>
         <div class="about-grid">
           <div class="about-item">
-            <div class="icon-mark" style="background:linear-gradient(135deg,var(--blue-1),var(--blue-2));">
+            <div class="icon-mark">
               <svg viewBox="0 0 24 24">
-                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
-                <circle cx="12" cy="10" r="3" />
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
             </div>
             <h3>Privacy first</h3>
-            <p>Your data stays on your device. We don't collect, transmit, or store anything we don't need to.</p>
+            <p>Your files and data stay on your device. We avoid unnecessary cloud dependencies and invasive tracking.</p>
           </div>
           <div class="about-item">
-            <div class="icon-mark" style="background:linear-gradient(135deg,var(--blue-1),var(--blue-2));">
+            <div class="icon-mark">
               <svg viewBox="0 0 24 24">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
             </div>
             <h3>Built for speed</h3>
-            <p>Lean, native Android and macOS code. No bloated frameworks — just fast, responsive apps that respect your battery.
-            </p>
+            <p>Lean, native codebases that launch quickly, respect battery life, and stay out of your way.</p>
           </div>
           <div class="about-item">
-            <div class="icon-mark" style="background:linear-gradient(135deg,var(--blue-1),var(--blue-2));">
+            <div class="icon-mark">
               <svg viewBox="0 0 24 24">
-                <rect x="6" y="2" width="12" height="20" rx="2" />
+                <rect x="5" y="2" width="14" height="20" rx="2" />
                 <line x1="10" y1="18" x2="14" y2="18" />
               </svg>
             </div>
-            <h3>Native Android</h3>
-            <p>Built with Kotlin and Jetpack Compose, targeting the latest Android APIs and Material Design guidelines.
-            </p>
+            <h3>Modern native stack</h3>
+            <p>Crafted with Kotlin, Jetpack Compose, and SwiftUI to feel right at home on Android and macOS.</p>
           </div>
         </div>
       </div>
@@ -253,11 +305,9 @@
     <section id="contact">
       <div class="wrap">
         <div class="cta">
-          <div class="eyebrow" style="background:rgba(62,189,89,0.12);border-color:rgba(62,189,89,0.3);">
-            <span class="dot"></span> GET IN TOUCH
-          </div>
+          <div class="eyebrow"><span class="dot"></span> CONTACT</div>
           <h2>Have feedback or a suggestion?</h2>
-          <p>Whether it's a bug report, feature idea, or just a hello — we'd love to hear from you.</p>
+          <p>Whether it's a bug report, feature request, or general question, reach out anytime.</p>
           <div class="hero-actions">
             <a class="btn-primary" href="mailto:bytegif@gmail.com">Email bytegif@gmail.com</a>
           </div>
@@ -271,14 +321,18 @@
 
   <footer>
     <div class="wrap footer-inner">
+      <a class="brand" href="/">
+        <img src="images/main-logo.png" alt="ByteGif logo">
+        ByteGif
+      </a>
       <p>© 2026 ByteGif. Apps built to be useful.</p>
       <div class="foot-links">
-        <a href="#apps">Apps</a>
+        <a href="apps.html">Apps</a>
         <a href="#about">About</a>
         <a href="mailto:bytegif@gmail.com">Contact</a>
         <a href="https://www.facebook.com/bytegif" target="_blank" rel="noopener noreferrer" aria-label="ByteGif on Facebook" title="Facebook">
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="#6b7280" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.89h-2.3v6.99C18.34 21.13 22 16.99 22 12z" />
+            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.89h-2.3v6.99C18.34 21.13 22 16.99 22 12z" />
           </svg>
         </a>
         <a href="https://play.google.com/store/apps/dev?id=5212652438690411522" target="_blank" rel="noopener noreferrer" aria-label="ByteGif on Google Play" title="Google Play">
@@ -287,19 +341,28 @@
           </svg>
         </a>
       </div>
-      <a class="brand" href="/">
-        <img src="images/main-logo.png" alt="ByteGif logo">
-        ByteGif
-      </a>
     </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const themeBtn = document.querySelector('.theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const root = document.documentElement;
+          const current = root.getAttribute('data-theme');
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = current ? current === 'dark' : systemDark;
+          const next = isDark ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          localStorage.setItem('bytegif-theme', next);
+        });
+      }
+
       const menuBtn = document.querySelector('.menu-btn');
       const navUl = document.querySelector('nav ul');
       const pageHeader = document.querySelector('header');
-      const anchorOffset = () => (pageHeader ? pageHeader.offsetHeight + 28 : 120);
+      const anchorOffset = () => (pageHeader ? pageHeader.offsetHeight + 20 : 84);
 
       const smoothToAnchor = hash => {
         const target = document.querySelector(hash);
@@ -325,7 +388,7 @@
       document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', event => {
           const hash = link.getAttribute('href');
-          if (!hash || hash === '#' || hash.startsWith('#') && document.querySelector(hash)) {
+          if (!hash || hash === '#' || (hash.startsWith('#') && document.querySelector(hash))) {
             event.preventDefault();
             history.pushState(null, '', hash);
             smoothToAnchor(hash);
