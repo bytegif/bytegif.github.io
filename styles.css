@@ -1080,6 +1080,10 @@ section {
   display: block;
 }
 
+.web-player-screenshot {
+  width: min(82vw, 820px);
+}
+
 /* CleanMac & desktop landscape screenshots in horizontal swipe */
 .mac-cleaner-page .screenshot-item {
   width: min(82vw, 440px);
