@@ -897,6 +897,36 @@ section {
   border-color: var(--text);
 }
 
+.cta-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cta-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.cta-social-links a:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+
+.cta-social-links svg {
+  fill: currentColor;
+}
+
 /* ---------- App Landing Pages (Shared) ---------- */
 .app-hero {
   padding: 64px 0 64px;
@@ -1491,16 +1521,13 @@ footer .foot-links a:hover {
 }
 
 footer .foot-links a svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   vertical-align: middle;
   display: inline-block;
-  fill: currentColor;
+  fill: none;
+  stroke: currentColor;
   transition: color 0.15s ease, transform 0.15s ease;
-}
-
-footer .foot-links a svg path {
-  fill: currentColor !important;
 }
 
 footer .foot-links a:hover svg {
